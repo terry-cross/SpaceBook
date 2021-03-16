@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
 
-import { LOGIN, useStore } from "../store/store";
+import { SIGNUP, useStore } from "../store/store";
 
-function Login(props) {
+function SignUp(props) {
   const dispatch = useStore((state) => state.dispatch);
 
   const [formData, setFormData] = useState({
@@ -11,10 +11,10 @@ function Login(props) {
     password: "",
   });
 
-  const handleLogin = (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
     loginRequest(formData.username, formData.password).then((userData) =>
-      dispatch({ type: LOGIN, payload: userData })
+      dispatch({ type: SIGNUP, payload: userData })
     );
   };
 
@@ -26,8 +26,8 @@ function Login(props) {
 
   return (
     <>
-      <form id="login-form" onSubmit={handleLogin}>
-        <label htmlFor="username">Username</label>
+      <form id="login-form" onSubmit={handleSignUp}>
+        <label htmlFor="username">Create Username</label>
         <input
           type="text"
           name="username"
@@ -37,7 +37,7 @@ function Login(props) {
           onChange={handleChange}
         />
 
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Create Password</label>
         <input
           type="password"
           name="password"
@@ -45,10 +45,10 @@ function Login(props) {
           required
           onChange={handleChange}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
       </form>
     </>
   );
 }
 
-export default Login;
+export default SignUp;
