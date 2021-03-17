@@ -9,7 +9,6 @@ function Menu(props) {
 
   const logout = (e) => {
     logoutRequest(user.token).then(() => dispatch({ type: LOGOUT }));
-    // window.location.reload(false);
   };
 
   return (
