@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../components/Login";
+import SignUp from "../components/SignUp";
 import Menu from "../components/Menu";
 import { useStore } from "../store/store";
 
@@ -10,6 +11,7 @@ function Home(props) {
       <Menu />
       <h2>Your favorite microblogging platform</h2>
       {!user.token && <Login />}
+      {!user.token && <SignUp />}
     </>
   );
 }
