@@ -1,4 +1,10 @@
 body {
+  color: white;
+  /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b25e1d89-1784-4fd8-a7ae-c0f22346ce99/dqkfx6-f125cdad-0030-4d7c-b1e3-553272942f1f.jpg/v1/fill/w_1000,h_800,q_70,strp/space_website_background_by_leftyfencer_dqkfx6-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMDI0IiwicGF0aCI6IlwvZlwvYjI1ZTFkODktMTc4NC00ZmQ4LWE3YWUtYzBmMjIzNDZjZTk5XC9kcWtmeDYtZjEyNWNkYWQtMDAzMC00ZDdjLWIxZTMtNTUzMjcyOTQyZjFmLmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.-toTda_JjUsGqu0S8V8WyZ1EUXnRIMgRDFpj3k53EBA"); */
+  background-image: url("https://wallpaperaccess.com/full/1253090.jpg");
+  background-size: cover;
+  text-align: center;
+  flex-direction: column;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +16,72 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.create-username {
+  text-align: center;
+  /* font-family: fantasy; */
+  font-size: 20px;
+  padding-top: 15px;
+  /* color: blue; */
+}
+.create-password {
+  text-align: center;
+  /* font-family: fantasy; */
+  font-size: 20px;
+  /* color: blue; */
+}
+.confirm-password {
+  text-align: center;
+  /* font-family: fantasy; */
+  font-size: 20px;
+  /* color: blue; */
+}
+.Email {
+  text-align: center;
+  /* font-family: fantasy; */
+  font-size: 20px;
+}
+.sign-up-btn {
+  display: flex;
+  margin: auto;
+  text-align: right;
+  /* background-color: lightblue; */
+}
+h1 {
+  font-family: fantasy;
+  text-align: center;
+  /* color: blue; */
+}
+.userName {
+  flex-direction: column;
+  margin: auto;
+  /* font-family: fantasy; */
+  font-size: 20px;
+  /* color: blue; */
+}
+.password {
+  flex-direction: column;
+  margin: auto;
+  /* font-family: fantasy; */
+  font-size: 20px;
+  /* color: blue; */
+}
+.login {
+  display: flex;
+  margin: auto;
+  text-align: right;
+  justify-content: center;
+  /* border-bottom: 2px solid black; */
+  padding-bottom: 15px;
+  width: 600px;
+}
+
+h5::before,
+h5::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.3rem solid white;
+  width: 10rem;
+  margin: 0 1rem;
+  transform: translateY(0rem);
 }

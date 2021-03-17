@@ -27,25 +27,31 @@ function Login(props) {
   return (
     <>
       <form id="login-form" onSubmit={handleLogin}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          autoFocus
-          required
-          onChange={handleChange}
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          required
-          onChange={handleChange}
-        />
-        <button type="submit">Login</button>
+        <div className="userName">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            autoFocus
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="password">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="login">
+          <button type="submit">Login</button>
+        </div>
+        <h5>Not a member yet? sign up bellow!</h5>
       </form>
     </>
   );
