@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { signUpRequest } from "../fetchRequests";
 import { SIGNUP, useStore } from "../store/store";
 
+const initialState = {
+  username: "",
+  password: "",
+  displayName: "",
+};
+
 function SignUp(props) {
   const dispatch = useStore((state) => state.dispatch);
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    displayName: "",
-  });
+  const [formData, setFormData] = useState(initialState);
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ function SignUp(props) {
       formData.displayName,
       formData.password
     ).then((userData) => dispatch({ type: SIGNUP, payload: userData }));
+    setFormData(initialState);
   };
 
   const handleChange = (e) => {
