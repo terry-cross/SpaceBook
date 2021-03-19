@@ -58,7 +58,6 @@ function SignUp(props) {
           <div className="create-password">
             <label htmlFor="password">Create Password:</label>
             <input
-              hidden="true"
               placeholder="create password"
               type="text"
               name="password"
