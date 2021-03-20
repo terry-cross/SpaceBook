@@ -43,8 +43,10 @@ function SignUp(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="Email">
-          <label htmlFor="username">Email:</label>
+        <div>
+          <label className="Email" htmlFor="username">
+            Email:
+          </label>
           <input
             placeholder="Email"
             type="text"

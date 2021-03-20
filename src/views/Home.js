@@ -9,7 +9,9 @@ function Home(props) {
   return (
     <>
       <Menu />
-      <h2>Your favorite microblogging platform</h2>
+      <h2 className="middlePrompt">
+        Your favorite place for all things space!
+      </h2>
       {!user.token && <Login />}
       {!user.token && <SignUp />}
     </>
