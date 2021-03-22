@@ -8,9 +8,7 @@ const initialState = { user: { token: "" }, messages: [] };
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
-export const GET_MESSAGES = "GET_MESSAGES";
-export const POST_MESSAGES = "POST_MESSAGES";
-export const PATCH_USER = "PATCH_USER";
+
 // define reducer function
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,12 +18,6 @@ const reducer = (state, action) => {
       return { user: action.payload };
     case LOGOUT:
       return { user: {} };
-    case GET_MESSAGES:
-        return { messages: action.payload};
-    case POST_MESSAGES:
-      return state;
-    case PATCH_USER:
-      return state;
     default:
       return state;
   }
