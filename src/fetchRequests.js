@@ -35,5 +35,5 @@ export const signUpRequest = (username, displayName, password) => {
     }).then((res) => res.json());
   };
 
-  export const post_messages = ()
+  
 
