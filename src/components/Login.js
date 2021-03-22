@@ -30,6 +30,7 @@ function Login(props) {
         <div className="userName">
           <label htmlFor="username">Username:</label>
           <input
+            placeholder="Enter Username"
             type="text"
             name="username"
             value={formData.username}
@@ -41,6 +42,7 @@ function Login(props) {
         <div className="password">
           <label htmlFor="password">Password:</label>
           <input
+            placeholder="Enter Password"
             type="password"
             name="password"
             value={formData.password}
@@ -49,9 +51,11 @@ function Login(props) {
           />
         </div>
         <div className="login">
-          <button type="submit">Login</button>
+          <button className="logInBtn" type="submit">
+            Login
+          </button>
         </div>
-        <h5>Not a member yet? sign up bellow!</h5>
+        <h5 className="memberPrompt">Not a member yet? sign up bellow!</h5>
       </form>
     </>
   );

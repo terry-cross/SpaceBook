@@ -13,7 +13,7 @@ function Menu(props) {
 
   return (
     <div id="menu">
-      <h1>SpaceBook</h1>
+      {/* <h1>SpaceBook</h1> */}
       <div id="menu-links">
         <Link to="/messages">Messages</Link>
         {user.token && (
