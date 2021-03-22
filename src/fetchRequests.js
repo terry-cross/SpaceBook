@@ -28,12 +28,3 @@ export const signUpRequest = (username, displayName, password) => {
     }),
   }).then((res) => res.json());
 };
-
-  export const get_messages = (messages) => {
-    return fetch(baseURL + "messages", {
-      headers: { "Content-Type": "text/json"}
-    }).then((res) => res.json());
-  };
-
-  
-
