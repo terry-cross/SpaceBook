@@ -16,7 +16,11 @@ function Menu(props) {
       <h1>SpaceBook</h1>
       <div id="menu-links">
         <Link to="/messages">Messages</Link>
-        {user.token && <button onClick={logout}>Logout</button>}
+        {user.token && (
+          <button id="logoutButton" onClick={logout}>
+            Logout
+          </button>
+        )}
       </div>
     </div>
   );
