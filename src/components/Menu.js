@@ -8,19 +8,26 @@ function Menu(props) {
   const dispatch = useStore((state) => state.dispatch);
 
   const logout = (e) => {
+
     logoutRequest(user.token).then(() => dispatch({ type: LOGOUT }));
+
   };
+    
+  // };
 
   return (
     <div id="menu">
       {/* <h1>SpaceBook</h1> */}
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
+
+        <Link to="/views/MessageList">Messages</Link>
+
         {user.token && (
           <button id="logoutButton" onClick={logout}>
             Logout
           </button>
         )}
+
       </div>
     </div>
   );
