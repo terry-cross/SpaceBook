@@ -1,13 +1,165 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  color: white;
+  background-image: url("https://i.pinimg.com/originals/21/a1/b4/21a1b47cb15b51e2c07b12f9f9f39d58.jpg");
+  /* background-image: url("https://img.freepik.com/free-vector/fantasy-space-background-cartoon-flat-design_212168-801.jpg?size=626&ext=jpg"); */
+  /* background-image: url("https://c0.wallpaperflare.com/preview/544/134/389/astronaut-background-cartoon-cosmonaut.jpg"); */
+  /* background-image: url("https://i.pinimg.com/originals/09/c6/b6/09c6b6e6d1b31217489e1428ab32149e.jpg"); */
+
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+input {
+  height: 20px;
+  /* text-align: center; */
+  border-radius: 50px;
+  background-color: rgb(223, 223, 223);
+  margin: 3px 0;
+  box-sizing: border-box;
+}
+.create-username {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+}
+.create-password {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.Email {
+  font-family: "Times New Roman", Times, serif;
+  /* text-align: center; */
+  font-size: 20px;
+}
+.sign-up-btn {
+  border-radius: 50px;
+  /* display: flex;
+  margin: auto; */
+  text-align: right;
+  background-color: rgb(194, 208, 223);
+}
+.userName {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.password {
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 20px;
+}
+.login {
+  display: flex;
+  margin: auto;
+  text-align: right;
+  justify-content: center;
+  padding-bottom: 15px;
+  width: 600px;
+}
+.logInBtn {
+  border-radius: 50px;
+  background-color: rgb(194, 208, 223);
+}
+
+.middlePrompt {
+  font-family: "Times New Roman", Times, serif;
+}
+.memberPrompt {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+h5::before,
+h5::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.3rem solid white;
+  width: 10rem;
+  margin: 0 1rem;
+  transform: translateY(rem);
+}
+
+/* Neon Header CSS bellow this point. */
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  padding-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 19%;
+}
+
+.neon {
+  font-family: neon;
+  color: #fb4264;
+  font-size: 3vw;
+  line-height: 3vw;
+  text-shadow: 0 0 3vw #f40a35;
+}
+
+.flux {
+  font-family: neon;
+  color: #426dfb;
+  font-size: 3vw;
+  line-height: 3vw;
+  text-shadow: 0 0 3vw #2356ff;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #fed128;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #146c80;
+  }
 }
