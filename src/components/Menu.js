@@ -9,14 +9,15 @@ function Menu(props) {
 
   const logout = (e) => {
     logoutRequest(user.token).then(()=>dispatch({type:"LOGOUT"}));
-    
   };
+    
+  // };
 
   return (
     <div id="menu">
       <h1>Kwitter</h1>
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
+        <Link to="/views/MessageList">Messages</Link>
         {user.token && <button onClick={logout}>Logout</button>}
       </div>
     </div>

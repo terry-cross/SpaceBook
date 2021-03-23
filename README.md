@@ -9,6 +9,6 @@ See my.kenzie.academy for details.
 
 ## Credits and References
 
-Team Members:
+Team Members: Terry Cross, Alona Azure, Aris Fornasari, Zach Dyer
 
 References
