@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { signUpRequest } from "../fetchRequests";
 import { SIGNUP, useStore } from "../store/store";
+// import { profile } from "../views/profile";
 
 const initialState = {
   username: "",
@@ -38,7 +39,6 @@ function SignUp(props) {
             type="text"
             name="username"
             value={formData.username}
-            autoFocus
             required
             onChange={handleChange}
           />
@@ -52,7 +52,6 @@ function SignUp(props) {
             type="text"
             name="displayName"
             value={formData.displayName}
-            autoFocus
             required
             onChange={handleChange}
           />
