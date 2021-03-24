@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
-
+import { useHistory } from "react-router-dom";
 import { LOGIN, useStore } from "../store/store";
 
 function Login(props) {
   const dispatch = useStore((state) => state.dispatch);
-
+  let history = useHistory();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -16,6 +16,7 @@ function Login(props) {
     loginRequest(formData.username, formData.password).then((userData) =>
       dispatch({ type: LOGIN, payload: userData })
     );
+    history.push("/profile");
   };
 
   const handleChange = (e) => {
