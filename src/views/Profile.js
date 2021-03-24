@@ -1,4 +1,3 @@
-// TODO: Create a Profile to display the current users information
 import React from 'react'
 import validate from '../ValidateInfo';
 
@@ -80,4 +79,8 @@ const ProfilePage = () => {
     );
 };
 
+<<<<<<< HEAD
 export default ProfilePage
+=======
+export default ProfilePage
+>>>>>>> ce847ac9eeb11155e157de1a508cde93d637e639

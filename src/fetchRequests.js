@@ -17,6 +17,12 @@ export const logoutRequest = (token) => {
   }).then((res) => res.json());
 };
 
+
+export const getMessages = () => {
+  return fetch(baseURL + "messages") 
+  .then((res) => res.json());
+};
+
 export const signUpRequest = (username, displayName, password) => {
   return fetch(baseURL + "users", {
     method: "POST",
@@ -28,3 +34,4 @@ export const signUpRequest = (username, displayName, password) => {
     }),
   }).then((res) => res.json());
 };
+
