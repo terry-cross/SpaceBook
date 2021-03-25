@@ -1,5 +1,6 @@
 import React from "react";
 import validate from "../ValidateInfo";
+
 // import { useStore } from "../store/store";
 const ProfilePage = () => {
   const { handleChange, values, handleSubmit } = validate;
@@ -7,11 +8,11 @@ const ProfilePage = () => {
   return (
     <div className="form-content-right">
       <form className="form" onSubmit={handleSubmit}>
-        <h1>Create your profile here.</h1>
-        <div className="form-input">
-          <lable htmlfor="profile" className="form-lable">
+        {/* <div className="form-input">
+          <label htmlfor="profile" className="form-lable">
             Full name
-          </lable>
+          </label>
+
           <input
             id="profile"
             type="text"
@@ -21,12 +22,11 @@ const ProfilePage = () => {
             value={values}
             onChange={handleChange}
           />
-          {/* {errors.fullName && <p>{errors.fullName}</p>} */}
-        </div>
-        <div className="form-input">
-          <lable htmlfor="Email" className="form-lable">
+        </div> */}
+        {/* <div className="form-input">
+          <label htmlfor="Email" className="form-lable">
             Email
-          </lable>
+          </label>
           <input
             id="email"
             type="email"
@@ -36,12 +36,11 @@ const ProfilePage = () => {
             value={values}
             onChange={handleChange}
           />
-          {/* {errors.email && <p>{errors.email}</p>} */}
-        </div>
-        <div className="form-input">
-          <lable htmlfor="userName" className="form-lable">
+        </div> */}
+        {/* <div className="form-input">
+          <label htmlfor="userName" className="form-lable">
             User Name
-          </lable>
+          </label>
           <input
             id="userName"
             type="userName"
@@ -51,12 +50,25 @@ const ProfilePage = () => {
             value={values}
             onChange={handleChange}
           />
-        </div>
-        <div className="form-input">
-          <lable htmlfor="bio" className="form-lable">
+        </div> */}
+        <select
+          id="profileDropDown"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>Options</option>
+          <option value="1">Messages</option>
+          <option value="2">Edit profile</option>
+          <option value="3">Home</option>
+        </select>
+        <div>
+          <label htmlFor="bio" className="form-lable">
             Tell Us About Yourself
-          </lable>
-          <input
+          </label>
+        </div>
+
+        <div className="form-input">
+          <textarea
             id="bio"
             type="bio"
             name="bio"
@@ -65,17 +77,14 @@ const ProfilePage = () => {
             value={values}
             onChange={handleChange}
           />
-          {/* {errors.bio && <p>{errors.bio}</p>} */}
         </div>
         <button className="form-input-btn" type="submit">
-          Submit Profile
+          Update
         </button>
-        <span className="form-input-login">{/* <a Link="#"></a> */}</span>
+        <span className="form-input-login"></span>
       </form>
     </div>
   );
 };
 
-
 export default ProfilePage;
-

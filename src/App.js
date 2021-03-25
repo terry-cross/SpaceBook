@@ -14,10 +14,16 @@ function App() {
         <Route exact path="/" component={Home} />
 
         <Route path="/views/MessageList" component={MessageList} />
+
         <Route exact path="/messages/:id" component={MessageItem}/>
 
         <Route exact path="/profile" component={Profile} />
-        <Route path="*" component={NotFound} />
+
+
+
+
+        <Route exact path="/profile" component={Profile} />
+        <Route component={NotFound} />
 
       </Switch>
     </div>
