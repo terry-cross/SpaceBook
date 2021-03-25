@@ -21,8 +21,7 @@ function Menu(props) {
             <Nav.Link href="/messages">Messages</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
             <Nav.Link href="/Profile">About</Nav.Link>
-            <Nav.Link href="/Profile">Profile</Nav.Link>
-            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Users">User List</Nav.Link>
             {user.token && (
               <Nav.Link id="logoutButton" onClick={logout}>
                 Logout
