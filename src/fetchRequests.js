@@ -32,3 +32,10 @@ export const signUpRequest = (username, displayName, password) => {
     }),
   }).then((res) => res.json());
 };
+
+
+export const getIntergalacticMessage = (id) => {
+  return fetch(baseURL + "messages/" + id) 
+  .then((res) => res.json());
+};
+

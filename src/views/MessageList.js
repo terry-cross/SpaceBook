@@ -15,16 +15,18 @@ function MessageList() {
     });
   }, []);
 
-  return (
-    <div>
-      <h1>Message List</h1>
 
+  return (
+
+    <div className="messageColumn">
+      <h1>Message List</h1>
+      <Link to="/" style={{ color: "red" }}>Go Home</Link>
       {messages.map((messages) => {
         return (
           <MessageCard messages={messages} id={messages.id} key={messages.id} />
         );
       })}
-      <Link to="/">Go Home</Link>
+      <Link to="/" style={{ color: "red" }}>Go Home</Link>
     </div>
   );
 }

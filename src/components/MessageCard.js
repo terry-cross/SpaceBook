@@ -9,7 +9,7 @@ function MessageCard(props) {
   const { id } = props;
   const { username, text, createdAt, likes } = props.messages;
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "20rem" }} className="text-center">
       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
         <Card.Title>{text}</Card.Title>
