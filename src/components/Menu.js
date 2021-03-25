@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useStore, LOGOUT } from "../store/store";
 import { logoutRequest } from "../fetchRequests";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
@@ -9,21 +9,18 @@ function Menu(props) {
   const dispatch = useStore((state) => state.dispatch);
 
   const logout = (e) => {
-
     logoutRequest(user.token).then(() => dispatch({ type: LOGOUT }));
-
   };
-    
+
   // };
 
   return (
     <div id="menu">
       <div id="menu-links">
-
         <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
           <Nav className="Space">
             <Navbar.Brand>Spacebook</Navbar.Brand>
-            <Nav.Link href="/messages">Messages</Nav.Link>
+            <Nav.Link href="/views/MessageList">Messages</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
             <Nav.Link href="/Profile">About</Nav.Link>
             <Nav.Link href="/Users">User List</Nav.Link>
@@ -35,16 +32,13 @@ function Menu(props) {
           </Nav>
         </Navbar>
 
-
-        <Link to="/views/MessageList">Messages</Link>
+        {/* <Link to="/views/MessageList">Messages</Link> */}
 
         {user.token && (
           <button id="logoutButton" onClick={logout}>
             Logout
           </button>
         )}
-
-
       </div>
     </div>
   );
