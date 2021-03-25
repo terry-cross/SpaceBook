@@ -1,4 +1,4 @@
-const baseURL = "https://kwitter-api-b.herokuapp.com/";
+const baseURL = "https://socialapp-api.herokuapp.com/";
 
 export const loginRequest = (username, password) => {
   return fetch(baseURL + "auth/login", {
@@ -17,10 +17,8 @@ export const logoutRequest = (token) => {
   }).then((res) => res.json());
 };
 
-
 export const getMessages = () => {
-  return fetch(baseURL + "messages") 
-  .then((res) => res.json());
+  return fetch(baseURL + "messages").then((res) => res.json());
 };
 
 export const signUpRequest = (username, displayName, password) => {
@@ -34,4 +32,3 @@ export const signUpRequest = (username, displayName, password) => {
     }),
   }).then((res) => res.json());
 };
-
