@@ -1,13 +1,7 @@
 body {
   color: white;
   background-image: url("https://i.pinimg.com/originals/21/a1/b4/21a1b47cb15b51e2c07b12f9f9f39d58.jpg");
-  /* background-image: url("https://img.freepik.com/free-vector/fantasy-space-background-cartoon-flat-design_212168-801.jpg?size=626&ext=jpg"); */
-  /* background-image: url("https://c0.wallpaperflare.com/preview/544/134/389/astronaut-background-cartoon-cosmonaut.jpg"); */
-  /* background-image: url("https://i.pinimg.com/originals/09/c6/b6/09c6b6e6d1b31217489e1428ab32149e.jpg"); */
-
   background-size: cover;
-  /* background-repeat: no-repeat; */
-
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -22,7 +16,6 @@ code {
 }
 input {
   height: 20px;
-  /* text-align: center; */
   border-radius: 50px;
   background-color: rgb(223, 223, 223);
   margin: 3px 0;
@@ -115,6 +108,16 @@ h5::after {
   height: 100px;
   width: 300px;
 }
+.messageColumn {
+  text-align: center;
+  color: gray;
+}
+#text-center {
+  text-align: center;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+  background: rgba(5, 5, 5, 0.7);
+}
 /* Neon Header CSS bellow this point. */
 
 @font-face {
@@ -190,9 +193,3 @@ h5::after {
 }
 
 /* Message List */
-.text-center {
-  text-align: center;
-  margin: 10px auto;
-  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
-  background: rgba(5, 5, 5, 0.7);
-}
