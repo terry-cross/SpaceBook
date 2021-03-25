@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useStore, LOGOUT } from "../store/store";
 import { logoutRequest } from "../fetchRequests";
+import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 
 function Menu(props) {
   const user = useStore((state) => state.user);
@@ -13,14 +14,22 @@ function Menu(props) {
 
   return (
     <div id="menu">
-      {/* <h1>SpaceBook</h1> */}
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
-        {user.token && (
-          <button id="logoutButton" onClick={logout}>
-            Logout
-          </button>
-        )}
+        <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
+          <Nav className="Space">
+            <Navbar.Brand>Spacebook</Navbar.Brand>
+            <Nav.Link href="/messages">Messages</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Profile">About</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            {user.token && (
+              <Nav.Link id="logoutButton" onClick={logout}>
+                Logout
+              </Nav.Link>
+            )}
+          </Nav>
+        </Navbar>
       </div>
     </div>
   );
