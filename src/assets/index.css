@@ -163,3 +163,11 @@ h5::after {
     color: #146c80;
   }
 }
+
+/* Message List */
+.text-center {
+  text-align: center;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+  background: rgba(5, 5, 5, 0.7);
+}
