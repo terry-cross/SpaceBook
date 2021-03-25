@@ -4,6 +4,7 @@ import validate from "../ValidateInfo";
 // import { useStore } from "../store/store";
 const ProfilePage = () => {
   const { handleChange, values, handleSubmit } = validate;
+   
 
   return (
     <div className="form-content-right">
@@ -66,8 +67,8 @@ const ProfilePage = () => {
             Tell Us About Yourself
           </label>
         </div>
-
-        <div className="form-input">
+        
+       <div className="form-input">
           <textarea
             id="bio"
             type="bio"
