@@ -90,7 +90,20 @@ h5::after {
   margin: 0 1rem;
   transform: translateY(rem);
 }
-
+#profileDropDown {
+  text-align: left;
+  border-radius: 25px;
+  background-color: gainsboro;
+}
+.form-input-btn {
+  border-radius: 25px;
+  background-color: gainsboro;
+}
+.form-input2 {
+  border-radius: 15px;
+  height: 100px;
+  width: 300px;
+}
 /* Neon Header CSS bellow this point. */
 
 @font-face {
