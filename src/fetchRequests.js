@@ -20,7 +20,6 @@ export const logoutRequest = (token) => {
 export const getMessages = () => {
   return fetch(baseURL + "messages").then((res) => res.json());
 };
-
 export const signUpRequest = (username, displayName, password) => {
   return fetch(baseURL + "users", {
     method: "POST",
@@ -33,9 +32,6 @@ export const signUpRequest = (username, displayName, password) => {
   }).then((res) => res.json());
 };
 
-
 export const getIntergalacticMessage = (id) => {
-  return fetch(baseURL + "messages/" + id) 
-  .then((res) => res.json());
+  return fetch(baseURL + "messages/" + id).then((res) => res.json());
 };
-

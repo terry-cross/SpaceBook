@@ -14,8 +14,8 @@ function MessageItem(props) {
   }, []);
 
   return (
-    <div>
-      <h1 className="message_list">Message List</h1>
+    <div className="message_list">
+      <h1>Message List</h1>
       <Link to="/views/MessageList" style={{ color: "yellow" }}>
         See Message List
       </Link>

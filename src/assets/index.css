@@ -118,6 +118,16 @@ h5::after {
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
   background: rgba(5, 5, 5, 0.7);
 }
+h3 {
+  color: silver;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+.message_list {
+  text-align: center;
+  color: silver;
+}
+
 /* Neon Header CSS bellow this point. */
 
 @font-face {

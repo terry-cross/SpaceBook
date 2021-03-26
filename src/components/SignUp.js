@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { signUpRequest } from "../fetchRequests";
 import { SIGNUP, useStore } from "../store/store";
-// import { profile } from "../views/profile";
 
 const initialState = {
   username: "",
@@ -58,7 +57,7 @@ function SignUp(props) {
             <label htmlFor="password">Create Password:</label>
             <input
               placeholder="create password"
-              type="text"
+              type="password"
               name="password"
               value={formData.password}
               required
