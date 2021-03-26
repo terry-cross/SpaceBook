@@ -18,6 +18,9 @@ function MessageCard(props) {
         >
           See Intergalactic messages
         </Button>
+        <Button onClick={() => history.push(`/likes/${id}`)} variant="primary">
+          Like
+        </Button>
       </Card.Body>
     </Card>
   );
