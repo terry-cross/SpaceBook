@@ -5,6 +5,7 @@ import Profile from "./views/Profile";
 import MessageItem from "./components/MessageItem";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
+import { render } from "@testing-library/react";
 
 function App() {
   return (
