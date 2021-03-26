@@ -11,9 +11,6 @@ function Home(props) {
       <div>
         <Menu />
       </div>
-      <h2 className="middlePrompt">
-        {/* Your favorite place for all things space! */}
-      </h2>
       {!user.token && <Login />}
       {!user.token && <SignUp />}
     </>

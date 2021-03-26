@@ -1,8 +1,5 @@
 import { Card, Button } from "react-bootstrap";
-// import { propTypes } from 'react-bootstrap/esm/Image';
-// import { propTypes } from 'react-bootstrap/esm/Image';
 import { useHistory } from "react-router-dom";
-// import { useStore } from "../store";
 
 function MessageCard(props) {
   const history = useHistory();
@@ -10,7 +7,6 @@ function MessageCard(props) {
   const { username, text, createdAt, likes } = props.messages;
   return (
     <Card style={{ width: "20rem" }} id="text-center">
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
         <Card.Title>{text}</Card.Title>
         <Card.Text>{text}</Card.Text>

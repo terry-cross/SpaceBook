@@ -1,56 +1,16 @@
 import React from "react";
 import validate from "../ValidateInfo";
+import Menu from "../components/Menu";
 
-// import { useStore } from "../store/store";
 const ProfilePage = () => {
   const { handleChange, values, handleSubmit } = validate;
 
   return (
     <div className="form-content-right">
+      <div>
+        <Menu />
+      </div>
       <form className="form" onSubmit={handleSubmit}>
-        {/* <div className="form-input">
-          <label htmlfor="profile" className="form-lable">
-            Full name
-          </label>
-
-          <input
-            id="profile"
-            type="text"
-            name="fullName"
-            className="form-input"
-            placeholder=""
-            value={values}
-            onChange={handleChange}
-          />
-        </div> */}
-        {/* <div className="form-input">
-          <label htmlfor="Email" className="form-lable">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            className="form-input"
-            placeholder=""
-            value={values}
-            onChange={handleChange}
-          />
-        </div> */}
-        {/* <div className="form-input">
-          <label htmlfor="userName" className="form-lable">
-            User Name
-          </label>
-          <input
-            id="userName"
-            type="userName"
-            name="userName"
-            className="form-input"
-            placeholder=""
-            value={values}
-            onChange={handleChange}
-          />
-        </div> */}
         <select
           id="profileDropDown"
           class="form-select"
