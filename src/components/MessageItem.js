@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getIntergalacticMessage } from "../fetchRequests";
 import { Link } from "react-router-dom";
 import MessageCard from "../components/MessageCard";
+import NewMessage from "../components/NewMessage"
 
 function MessageItem(props) {
   const [messages, setMessages] = useState([]);
@@ -19,9 +20,11 @@ function MessageItem(props) {
       <Link to="/views/MessageList" style={{ color: "yellow" }}>
         See Message List
       </Link>
+      
       {messages && (
         <MessageCard messages={messages} id={messages.id} key={messages.id} />
       )}
+      <NewMessage/>
       <Link to="/" style={{ color: "red" }}>
         Go Home
       </Link>

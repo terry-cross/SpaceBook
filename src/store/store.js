@@ -8,7 +8,7 @@ const initialState = { user: { token: "" }, messages: [] };
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
-
+export const POST = "POST";
 // define reducer function
 const reducer = (state, action) => {
   switch (action.type) {
