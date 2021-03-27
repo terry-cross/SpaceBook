@@ -1,5 +1,5 @@
 import create from "zustand";
-import { devtools, redux } from "zustand/middleware";
+import { devtools, redux, persist } from "zustand/middleware";
 
 // define the store's initial state
 const initialState = { user: { token: "" }, messages: [] };
@@ -13,7 +13,7 @@ export const POST = "POST";
 const reducer = (state, action) => {
   switch (action.type) {
     case LOGIN:
-      return { user: action.payload };
+      return { user: { token: action.payload } };
     case SIGNUP:
       return { user: action.payload };
     case LOGOUT:
@@ -24,4 +24,4 @@ const reducer = (state, action) => {
 };
 
 // create useStore hook
-export const useStore = create(devtools(redux(reducer, initialState)));
+export const useStore = create(persist(devtools(redux(reducer, initialState))));

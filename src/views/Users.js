@@ -1,7 +1,7 @@
 // TODO: Create a MessageList to display messages
 import Menu from "../components/Menu";
 import { useState, useEffect } from "react";
-import { getUsers } from "../fetchRequests";
+import { getUsersList } from "../fetchRequests";
 import { Link } from "react-router-dom";
 import UserCard from "../components/UserCard";
 
@@ -9,8 +9,8 @@ function UsersList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    getUsers().then((data) => {
-      setUsers(data.Users);
+    getUsersList().then((data) => {
+      setUsers(data.users);
     });
   }, []);
 
@@ -23,11 +23,10 @@ function UsersList() {
       <Link to="/" style={{ color: "red" }}>
         Go Home
       </Link>
-      {users.map((users) => {
-        return (
-          <UserCard users={users} id={users.id} key={users.id} />
-        );
-      })}
+      {users &&
+        users.map((user) => {
+          return <UserCard users={user} key={user.username} />;
+        })}
       <Link to="/" style={{ color: "red" }}>
         Go Home
       </Link>

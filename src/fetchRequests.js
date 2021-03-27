@@ -48,3 +48,8 @@ export const createMessageRequest = (token, message) => {
 export const getIntergalacticMessage = (id) => {
   return fetch(baseURL + "messages/" + id).then((res) => res.json());
 };
+
+export const getUsersList = () => {
+  return fetch(baseURL + "users").then((res) => res.json());
+};
+

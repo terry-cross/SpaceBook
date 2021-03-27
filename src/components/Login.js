@@ -16,8 +16,9 @@ function Login(props) {
   const handleLogin = (e) => {
     e.preventDefault();
     loginRequest(formData.username, formData.password).then((userData) => {
+      console.log(userData);
       if (userData.statusCode !== 400) {
-        dispatch({ type: LOGIN, payload: userData });
+        dispatch({ type: LOGIN, payload: userData.token });
         history.push("/profile");
       } else {
         setSuccess(false);

@@ -5,7 +5,7 @@ import Profile from "./views/Profile";
 import MessageItem from "./components/MessageItem";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
-import { render } from "@testing-library/react";
+import Users from "./views/Users";
 
 function App() {
   return (
@@ -13,16 +13,16 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
 
-        <Route path="/views/MessageList" component={MessageList} />
+        <Route exact path="/messages" component={MessageList} />
 
-        <Route exact path="/messages/:id" component={MessageItem} />
+        <Route path="/messages/:id" component={MessageItem} />
 
-        <Route exact path="/profile" component={Profile} />
+        <Route path="/profile" component={Profile} />
 
-        <Route exact path="/views/About" component={About} />
+        <Route exact path="/about" component={About} />
 
-        <Route exact path="/profile" component={Profile} />
-        <Route component={NotFound} />
+        <Route exact path="/users" component={Users} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </div>
   );

@@ -3,27 +3,24 @@ import { useHistory } from "react-router-dom";
 
 function UserCard(props) {
   const history = useHistory();
-  const { id } = props;
-  const { username, text, createdAt, likes } = props.messages;
+  const { username, displayName, about, createdAt, updatedAt, pictureLocation, googleId} = props.users;
   return (
     <Card style={{ width: "20rem" }} id="text-center">
       <Card.Body>
-        <Card.Title>{text}</Card.Title>
-        <Card.Text>{text}</Card.Text>
-        <div>About: {username}</div>
-        <div>About: {createdAt}</div>
+        <Card.Title>{username}</Card.Title>
+        <Card.Text>{displayName}</Card.Text>
+        <div>About: {about}</div>
+        <div>Joined: {createdAt}</div>
         <Button
-          onClick={() => history.push(`/messages/${id}`)}
+          onClick={() => history.push(`/users/${username}`)}
           variant="primary"
         >
           See Intergalactic messages
         </Button>
-        <Button onClick={() => history.push(`/likes/${id}`)} variant="primary">
-          Like
-        </Button>
+
       </Card.Body>
     </Card>
   );
 }
 
-export default MessageCard;
+export default UserCard;

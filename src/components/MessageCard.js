@@ -12,6 +12,7 @@ function MessageCard(props) {
         <Card.Text>{text}</Card.Text>
         <div>About: {username}</div>
         <div>About: {createdAt}</div>
+        <p>Likes: {likes.length || 0}</p>
         <Button
           onClick={() => history.push(`/messages/${id}`)}
           variant="primary"

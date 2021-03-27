@@ -127,6 +127,11 @@ h3 {
   text-align: center;
   color: silver;
 }
+.userColumn {
+  text-align: center;
+  color: silver;
+  padding-top: 50px;
+}
 
 /* Neon Header CSS bellow this point. */
 
