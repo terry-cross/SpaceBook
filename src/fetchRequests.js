@@ -32,12 +32,15 @@ export const signUpRequest = (username, displayName, password) => {
   }).then((res) => res.json());
 };
 ///
-export const createMessage = (message) => {
-  return fetch(baseURL + "users", {
+export const createMessageRequest = (token, message) => {
+  return fetch(baseURL + "messages", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      Authorization: "Bearer " + token,
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
-      message,
+      text: message,
     }),
   }).then((res) => res.json());
 };
