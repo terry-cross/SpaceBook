@@ -18,8 +18,12 @@ function SignUp(props) {
       formData.username,
       formData.displayName,
       formData.password
-    ).then((userData) => dispatch({ type: SIGNUP, payload: userData }));
-    setFormData(initialState);
+    ).then((userData) => {
+      if (userData.statusCode !== 200) {
+        dispatch({ type: SIGNUP, payload: userData });
+      }
+      setFormData(initialState);
+    });
   };
 
   const handleChange = (e) => {

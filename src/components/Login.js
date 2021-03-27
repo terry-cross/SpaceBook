@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
 import { useHistory } from "react-router-dom";
 import { LOGIN, useStore } from "../store/store";
+import { Modal } from "react-bootstrap";
 
 function Login(props) {
   const dispatch = useStore((state) => state.dispatch);
@@ -10,13 +11,18 @@ function Login(props) {
     username: "",
     password: "",
   });
+  const [success, setSuccess] = useState(true);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    loginRequest(formData.username, formData.password).then((userData) =>
-      dispatch({ type: LOGIN, payload: userData })
-    );
-    history.push("/profile");
+    loginRequest(formData.username, formData.password).then((userData) => {
+      if (userData.statusCode !== 400) {
+        dispatch({ type: LOGIN, payload: userData });
+        history.push("/profile");
+      } else {
+        setSuccess(false);
+      }
+    });
   };
 
   const handleChange = (e) => {
@@ -25,8 +31,29 @@ function Login(props) {
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
   };
 
+  const closeModal = () => {
+    setSuccess(true);
+  };
+
   return (
     <>
+      {!success ? (
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>Login Failed</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>Username or Password is incorrect please try again.</p>
+          </Modal.Body>
+
+          <Modal.Footer>
+            <button variant="primary" onClick={closeModal}>
+              Close
+            </button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      ) : null}
       <form id="login-form" onSubmit={handleLogin}>
         <div className="userName">
           <label htmlFor="username">Username:</label>
